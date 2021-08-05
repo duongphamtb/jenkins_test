@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'DAy la lan cuoi'
+                echo 'DAy la lan cuoi111'
             }
         }
         stage('Test') {
