@@ -13,7 +13,7 @@ pipeline {
         // }
         stage('Build') {
             steps {
-                echo 'lang 1 build..'
+                echo 'build lan 2..'
             }
         }
         stage('Test') {
