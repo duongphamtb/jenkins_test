@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Git checkout') {
-            steps {
-                git branch: "main",
-                    credentialsId: "jenkins-github-ssh-credentials",
-                    url: "git@github.com:duongphamtb/jenkins_test.git"
-            }
-        }
+        // stage('Git checkout') {
+        //     steps {
+        //         git branch: "main",
+        //             credentialsId: "jenkins-github-ssh-credentials",
+        //             url: "git@github.com:duongphamtb/jenkins_test.git"
+        //     }
+        // }
         stage('Build') {
             steps {
                 echo 'Building11111..'
