@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Test sssh buikld...'
+                echo 'Test sduonggg...'
             }
         }
         stage('Test') {
