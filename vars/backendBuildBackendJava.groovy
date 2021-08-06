@@ -6,7 +6,7 @@ def call(body) {
     pipeline {
         agent any
         triggers {
-            githubPush()
+            githubPushdsadsa()
         }
         stages {
             stage('Git checkout') {
