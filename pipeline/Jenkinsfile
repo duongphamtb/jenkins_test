@@ -1,5 +1,5 @@
 
-@Library('jenkins-library@1')_
+@Library('jenkins-library')_
 
 backendBuildBackendJava{}
 // pipeline {
