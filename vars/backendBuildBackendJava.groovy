@@ -5,7 +5,12 @@ def call(body) {
     body()
     pipeline {
         agent {
-            label "master"
+            node {
+                label "master"
+            }
+        }
+        options {
+            disableConcurrentBuilds()
         }
         triggers {
             githubPush()
