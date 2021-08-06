@@ -7,8 +7,10 @@ pipeline {
         stage('Git checkout') {
             steps {
                 git branch: "main",
-                    credentialsId: "BlueOcean Folder Credentials",
-                    url: "https://github.com/duongphamtb/jenkins_test"
+                    //credentialsId: "BlueOcean Folder Credentials",
+                    credentialsId: "test2",
+                    url: "git@github.com:duongphamtb/jenkins_test.git"
+                    //url: "https://github.com/duongphamtb/jenkins_test"
             }
         }
         stage('Build') {
