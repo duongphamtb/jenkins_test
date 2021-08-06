@@ -20,7 +20,7 @@ def call(body) {
             }
             stage('Build') {
                 steps {
-                    echo 'Test sduonggg...'
+                    echo 'Duong start testing...'
                 }
             }
             stage('Test') {
