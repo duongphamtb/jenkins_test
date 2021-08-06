@@ -1,4 +1,4 @@
 
-@Library('jenkins-library')_
+@Library('jenkins-library@1')_
 
 backendBuildBackendJava{}
