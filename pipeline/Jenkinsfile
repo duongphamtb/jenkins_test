@@ -1,32 +1,39 @@
-pipeline {
-    agent any
-    triggers { 
-        pollSCM('H */4 * * 1-5') 
-    }
-    stages {
-        stage('Git checkout') {
-            steps {
-                git branch: "main",
-                    //credentialsId: "BlueOcean Folder Credentials",
-                    credentialsId: "test2",
-                    url: "git@github.com:duongphamtb/jenkins_test.git"
-                    //url: "https://github.com/duongphamtb/jenkins_test"
-            }
-        }
-        stage('Build') {
-            steps {
-                echo 'Test sduonggg...'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
-}
+
+@Library('jenkins-library@1')_
+
+backendBuildBackendJava{}
+// pipeline {
+//     agent any
+//     // triggers { 
+//     //     pollSCM('H */4 * * 1-5') 
+//     // }
+//     triggers {
+//         githubPush()
+//     }
+//     stages {
+//         stage('Git checkout') {
+//             steps {
+//                 git branch: "main",
+//                     //credentialsId: "BlueOcean Folder Credentials",
+//                     credentialsId: "test2",
+//                     url: "git@github.com:duongphamtb/jenkins_test.git"
+//                     //url: "https://github.com/duongphamtb/jenkins_test"
+//             }
+//         }
+//         stage('Build') {
+//             steps {
+//                 echo 'Test sduonggg...'
+//             }
+//         }
+//         stage('Test') {
+//             steps {
+//                 echo 'Testing..'
+//             }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 echo 'Deploying....'
+//             }
+//         }
+//     }
+// }
