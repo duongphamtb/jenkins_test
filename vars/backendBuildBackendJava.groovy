@@ -4,7 +4,9 @@ def call(body) {
     body.delegate = config
     body()
     pipeline {
-        agent any
+        agent {
+            label "master"
+        }
         triggers {
             githubPush()
         }
