@@ -5,9 +5,9 @@ def call(body) {
     body()
     pipeline {
         agent any
-        triggers {
-            githubPush()
-        }
+        // triggers {
+        //     githubPush()
+        // }
         stages {
             stage('Git checkout') {
                 steps {
