@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'DAy la lan cuoi111'
+                echo 'Test sssh buikld...'
             }
         }
         stage('Test') {
