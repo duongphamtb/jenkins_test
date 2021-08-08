@@ -3,7 +3,7 @@
   #remote_user: root
   become: yes
   ##become: yes
-  become_user: root
+  #become_user: root
   roles:
     - role: ../roles/nginx
   tags:
