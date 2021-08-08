@@ -57,7 +57,7 @@ def call(body) {
                             ansiblePlaybook(
                                                 //credentialsId: "${env.ANSIBLE_SSH_CREDENTIALS_ID}",
                                                 // vaultCredentialsId: """${env.ANSIBLE_VAULT}""",
-                                                //inventory: 'ansible/inventories/hosts.yml',
+                                                inventory: 'ansible/inventories/hosts.yml',
                                                 playbook: """ansible/playbooks/${config.ANSIBLE_PLAYBOOK}""",
                                                 tags: """${ANSIBLE_TAGS}""",
                                                 colorized: true
