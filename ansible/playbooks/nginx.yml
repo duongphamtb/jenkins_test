@@ -1,9 +1,9 @@
 - name: Deploy the application secrets to the "staging" server
   hosts: staging
   # remote_user: vagrant
-  # become: yes
+  become: yes
   ##become: yes
-  become_user: root
+  #become_user: root
   roles:
     - role: ../roles/nginx
   tags:
