@@ -49,7 +49,7 @@ def call(body) {
             }
             stage("Deploy") {
                 steps {
-                    ansiColor('xterm') {
+                  //  ansiColor('xterm') {
                         script {
                             // if (config.EKS_CLUSTER) {
                             //     sh "aws eks --region ${env.AWS_REGION} update-kubeconfig --name ${config.EKS_CLUSTER}"
@@ -64,7 +64,7 @@ def call(body) {
                                                 colorized: true
                                             )
                         }
-                    }
+                  //  }
                 }
             }
         }
