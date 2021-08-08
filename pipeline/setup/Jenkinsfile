@@ -1,0 +1,6 @@
+@Library('jenkins-library@main')_
+
+devopsDefaultKubeAnsiblePipeline{
+    ANSIBLE_PLAYBOOK = "nginx.yml"
+    ANSIBLE_TAGS_LIST = "bastion,bastion_nginx_install,bastion_nginx_templates"
+}

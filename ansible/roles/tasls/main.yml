@@ -1,0 +1,13 @@
+---
+- name: Install nginx
+  include: nginx_install.yml
+  tags:
+    - bastion
+    - bastion_nginx_install
+
+
+- name: Copy nginx templates
+  include: nginx_templates.yml
+  tags:
+    - bastion
+    - bastion_nginx_templates

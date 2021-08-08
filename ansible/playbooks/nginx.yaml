@@ -1,0 +1,7 @@
+---
+
+- name: Deploy the application secrets to the "staging" server
+  hosts: staging
+  become: yes
+  roles:
+    - { role: ../roles/nginx }

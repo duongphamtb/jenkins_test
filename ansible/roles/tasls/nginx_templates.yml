@@ -1,0 +1,20 @@
+---
+- name: Copy nginx templates
+  template:
+    src: "{{ item }}.j2"
+    dest: "/etc/nginx/sites-available/{{ item }}"
+    mode: '0644'
+  loop:
+    - "jenkins"
+  notify:
+    - nginx_restart
+
+- name: Create symbolic link
+  file:
+    src: "/etc/nginx/sites-available/{{ item }}"
+    dest: "/etc/nginx/sites-enabled/{{ item }}"
+    state: link
+  loop:
+    - jenkins
+  notify:
+    - nginx_restart
