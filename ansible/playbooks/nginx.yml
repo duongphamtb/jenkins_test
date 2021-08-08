@@ -1,6 +1,6 @@
 - name: Deploy the application secrets to the "staging" server
   hosts: staging
-  remote_user: root
+  #remote_user: root
   become: yes
   ##become: yes
   #become_user: root
