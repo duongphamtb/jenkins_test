@@ -59,7 +59,7 @@ def call(body) {
                                                 // vaultCredentialsId: """${env.ANSIBLE_VAULT}""",
                                                 inventory: 'ansible/inventories/hosts.yml',
                                                 playbook: """ansible/playbooks/${config.ANSIBLE_PLAYBOOK}""",
-                                                tags: """${ANSIBLE_TAGS}""",
+                                                tags: """${config.ANSIBLE_TAGS_LIST}""",
                                                 colorized: true
                                             )
                         }
