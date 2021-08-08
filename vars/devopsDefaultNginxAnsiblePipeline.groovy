@@ -55,7 +55,7 @@ def call(body) {
                             //     sh "aws eks --region ${env.AWS_REGION} update-kubeconfig --name ${config.EKS_CLUSTER}"
                             // }
                             ansiblePlaybook(
-                                                credentialsId: "${env.ANSIBLE_SSH_CREDENTIALS_ID}",
+                                                //credentialsId: "${env.ANSIBLE_SSH_CREDENTIALS_ID}",
                                                 // vaultCredentialsId: """${env.ANSIBLE_VAULT}""",
                                                 inventory: 'ansible/inventories/hosts.yml',
                                                 playbook: """ansible/playbooks/${config.ANSIBLE_PLAYBOOK}""",
