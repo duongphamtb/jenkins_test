@@ -17,7 +17,7 @@ def call(body) {
             AWS_CREDENTIALS_ID = "jenkins-aws-credentials"
             AWS_REGION = "eu-west-1"
             DEPLOY_IMAGE = "xxx.dkr.ecr.eu-west-1.amazonaws.com/deploy-image:latest"
-            ANSIBLE_SSH_CREDENTIALS_ID = "ec2-user-slave-nodes"
+            ANSIBLE_SSH_CREDENTIALS_ID = "test2"
             ANSIBLE_VAULT = "ansible-vault"
         }
         parameters {
@@ -55,7 +55,7 @@ def call(body) {
                             //     sh "aws eks --region ${env.AWS_REGION} update-kubeconfig --name ${config.EKS_CLUSTER}"
                             // }
                             ansiblePlaybook(
-                                                credentialsId: "test2",
+                                                credentialsId: "${env.ANSIBLE_SSH_CREDENTIALS_ID}",
                                                 // vaultCredentialsId: """${env.ANSIBLE_VAULT}""",
                                                 inventory: 'ansible/inventories/hosts.yml',
                                                 playbook: """ansible/playbooks/${config.ANSIBLE_PLAYBOOK}""",
