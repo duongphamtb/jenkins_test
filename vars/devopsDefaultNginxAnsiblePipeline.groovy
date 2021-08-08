@@ -44,7 +44,7 @@ def call(body) {
             }
             stage('Test') {
                 steps {
-                    echo 'Testing..'
+                    echo 'Another Testing..'
                 }
             }
             stage("Deploy") {
