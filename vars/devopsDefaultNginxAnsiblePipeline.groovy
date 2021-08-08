@@ -39,7 +39,7 @@ def call(body) {
             }
             stage('Build') {
                 steps {
-                    echo 'Duong start final111fdsfdsss...'
+                    echo 'Duong start s...'
                 }
             }
             stage('Test') {
