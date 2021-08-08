@@ -1,13 +1,22 @@
 ---
-- name: Install nginx
-  include: nginx_install.yml
+# - name: Install nginx
+#   include: nginx_install.yml
+#   tags:
+#     - bastion
+#     - bastion_nginx_install
+
+- name: Create the application directory
+  file:
+    path: /home/vagrant/mini
+    state: directory
+    owner: vagrant
+    group: vagrant
   tags:
     - bastion
     - bastion_nginx_install
-
-
-- name: Copy nginx templates
-  include: nginx_templates.yml
-  tags:
-    - bastion
-    - bastion_nginx_templates
+  
+# - name: Copy nginx templates
+#   include: nginx_templates.yml
+#   tags:
+#     - bastion
+#     - bastion_nginx_templates
