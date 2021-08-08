@@ -1,5 +1,6 @@
 - name: Deploy the application secrets to the "staging" server
   hosts: staging
   become: yes
+  become_user: root
   roles:
     - role: ../roles/nginx
